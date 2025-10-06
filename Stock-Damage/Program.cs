@@ -1,3 +1,6 @@
+using Stock_Damage.Interfaces;
+using Stock_Damage.Services;
+
 namespace Stock_Damage
 {
     public class Program
@@ -7,7 +10,11 @@ namespace Stock_Damage
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddControllersWithViews();
+            builder.Services.AddControllersWithViews()
+                .AddNewtonsoftJson(); // Add Newtonsoft.Json support
+
+            // Register custom services
+            builder.Services.AddScoped<IStockDamageService, StockDamageService>();
 
             var app = builder.Build();
 

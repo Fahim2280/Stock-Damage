@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|d:\\github\\stock-damage\\stock-damage\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|d:\\github\\stock-damage\\stock-damage\\controllers\\stockdamagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|solutionrelative:controllers\\stockdamagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|d:\\github\\stock-damage\\stock-damage\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|d:\\github\\stock-damage\\stock-damage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5C175E42-FE49-46D8-BE4B-24930D8144D2}|Stock-Damage.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -62,7 +74,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,7 +94,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-10-06T19:40:40.686Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\appsettings.json*",
+              "RelativeToolTip": "appsettings.json*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-06T19:35:52.401Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StockDamageController.cs",
+              "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Controllers\\StockDamageController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StockDamageController.cs",
+              "ToolTip": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Controllers\\StockDamageController.cs*",
+              "RelativeToolTip": "Controllers\\StockDamageController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T19:35:13.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "SubItem_Code.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Models\\SubItem_Code.cs",
               "RelativeDocumentMoniker": "Models\\SubItem_Code.cs",
@@ -90,12 +141,11 @@
               "RelativeToolTip": "Models\\SubItem_Code.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:12:33.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:12:33.125Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "StockDamageEntry.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\DTOs\\StockDamageEntry.cs",
               "RelativeDocumentMoniker": "DTOs\\StockDamageEntry.cs",
@@ -103,12 +153,11 @@
               "RelativeToolTip": "DTOs\\StockDamageEntry.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T18:59:50.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T18:59:50.751Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "StockDamageViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\DTOs\\StockDamageViewModel.cs",
               "RelativeDocumentMoniker": "DTOs\\StockDamageViewModel.cs",
@@ -116,12 +165,11 @@
               "RelativeToolTip": "DTOs\\StockDamageViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:01:29.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:01:29.414Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "StockDamageService.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Services\\StockDamageService.cs",
               "RelativeDocumentMoniker": "Services\\StockDamageService.cs",
@@ -129,12 +177,11 @@
               "RelativeToolTip": "Services\\StockDamageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:02:28.332Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:02:28.332Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "IStockDamageService.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Interfaces\\IStockDamageService.cs",
               "RelativeDocumentMoniker": "Interfaces\\IStockDamageService.cs",
@@ -142,12 +189,11 @@
               "RelativeToolTip": "Interfaces\\IStockDamageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:02:15.251Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:02:15.251Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -160,7 +206,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "SaveResponse.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\DTOs\\SaveResponse.cs",
               "RelativeDocumentMoniker": "DTOs\\SaveResponse.cs",
@@ -168,12 +214,11 @@
               "RelativeToolTip": "DTOs\\SaveResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:01:15.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:01:15.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "ItemDetailsResponse.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\DTOs\\ItemDetailsResponse.cs",
               "RelativeDocumentMoniker": "DTOs\\ItemDetailsResponse.cs",
@@ -181,12 +226,11 @@
               "RelativeToolTip": "DTOs\\ItemDetailsResponse.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:01:51.689Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:01:51.689Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "Stock.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Models\\Stock.cs",
               "RelativeDocumentMoniker": "Models\\Stock.cs",
@@ -194,12 +238,11 @@
               "RelativeToolTip": "Models\\Stock.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T18:59:15.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T18:59:15.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "Godown.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Models\\Godown.cs",
               "RelativeDocumentMoniker": "Models\\Godown.cs",
@@ -207,12 +250,11 @@
               "RelativeToolTip": "Models\\Godown.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T18:58:50.149Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T18:58:50.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Employee.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "Models\\Employee.cs",
@@ -220,12 +262,11 @@
               "RelativeToolTip": "Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T18:59:40.701Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T18:59:40.701Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Currency.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Models\\Currency.cs",
               "RelativeDocumentMoniker": "Models\\Currency.cs",
@@ -233,12 +274,11 @@
               "RelativeToolTip": "Models\\Currency.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T18:59:28.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T18:59:28.668Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "ErrorViewModel.cs",
               "DocumentMoniker": "D:\\GitHub\\Stock-Damage\\Stock-Damage\\Models\\ErrorViewModel.cs",
               "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
@@ -246,8 +286,7 @@
               "RelativeToolTip": "Models\\ErrorViewModel.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T19:09:58.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-06T19:09:58.505Z"
             }
           ]
         }
