@@ -31,3 +31,4 @@ D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\refint\Stock-Damage.dll
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\Stock-Damage.pdb
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\Stock-Damage.genruntimeconfig.cache
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\ref\Stock-Damage.dll
+D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\Stock-Damage.sourcelink.json

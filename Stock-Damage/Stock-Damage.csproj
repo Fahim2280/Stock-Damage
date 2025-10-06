@@ -7,4 +7,10 @@
     <RootNamespace>Stock_Damage</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.5" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="NServiceBus.SqlServer" Version="7.0.12" />
+  </ItemGroup>
+
 </Project>
