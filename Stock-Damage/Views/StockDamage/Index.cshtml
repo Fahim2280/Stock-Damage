@@ -133,7 +133,7 @@
                                 <button type="button" class="btn btn-primary" id="addBtn">
                                     <i class="fas fa-plus"></i> Add to List
                                 </button>
-                                <button type="button" class="btn btn-success" id="saveBtn">
+                                <button type="button" class="btn btn-success" id="saveBtn" disabled>
                                     <i class="fas fa-save"></i> Save All
                                 </button>
                                 <button type="button" class="btn btn-secondary" id="clearBtn">
@@ -272,6 +272,7 @@
                 entries.push(entry);
                 addRowToTable(entry);
                 clearForm();
+                // Enable save button when entries are added
                 $('#saveBtn').prop('disabled', false);
             });
 
@@ -360,6 +361,7 @@
                     }
                 });
 
+                // If no entries left, show no data row and disable save button
                 if (entries.length === 0) {
                     $('#noDataRow').show();
                     $('#saveBtn').prop('disabled', true);
@@ -415,11 +417,12 @@
                             $('#entriesTableBody').empty();
                             $('#noDataRow').show();
                             rowCounter = 0;
+                            // Disable save button after successful save
+                            $('#saveBtn').prop('disabled', true).html('<i class="fas fa-save"></i> Save All');
                         } else {
                             alert('Error: ' + response.message);
-                            saveBtn.prop('disabled', false);
+                            saveBtn.prop('disabled', false).html('<i class="fas fa-save"></i> Save All');
                         }
-                        saveBtn.html('<i class="fas fa-save"></i> Save All');
                     },
                     error: function (xhr) {
                         const errorMsg = xhr.responseJSON?.message || 'An error occurred while saving';

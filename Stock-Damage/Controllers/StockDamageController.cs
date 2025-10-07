@@ -29,7 +29,7 @@ namespace Stock_Damage.Controllers
 
         // AJAX: Get Item Details
         [HttpGet]
-        public async Task<IActionResult> GetItemDetails(string subItemCode)
+        public async Task<IActionResult> GetItemDetails(string? subItemCode)
         {
             if (string.IsNullOrEmpty(subItemCode))
             {
@@ -48,7 +48,7 @@ namespace Stock_Damage.Controllers
 
         // AJAX: Save Stock Damage
         [HttpPost]
-        public async Task<IActionResult> SaveStockDamage([FromBody] List<StockDamageEntry> entries)
+        public async Task<IActionResult> SaveStockDamage([FromBody] List<StockDamageEntry>? entries)
         {
             if (entries == null || !entries.Any())
             {
@@ -65,9 +65,9 @@ namespace Stock_Damage.Controllers
             }
 
             // You can get the current user from HttpContext if using authentication
-            string currentUser = User?.Identity?.Name ?? "System";
+            string? currentUser = User?.Identity?.Name ?? "System";
 
-            var result = await _stockDamageService.SaveStockDamageAsync(entries, currentUser);
+            var result = await _stockDamageService.SaveStockDamageAsync(entries, currentUser ?? "System");
 
             if (result.Status == "Success")
             {

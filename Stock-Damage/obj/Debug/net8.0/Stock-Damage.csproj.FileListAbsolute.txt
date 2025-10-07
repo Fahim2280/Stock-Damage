@@ -25,7 +25,6 @@ D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\staticwebassets.build.json
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\staticwebassets.build.json.cache
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\staticwebassets.development.json
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\Stock-Damage.dll
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\refint\Stock-Damage.dll
 D:\GitHub\Stock-Damage\Stock-Damage\obj\Debug\net8.0\Stock-Damage.pdb

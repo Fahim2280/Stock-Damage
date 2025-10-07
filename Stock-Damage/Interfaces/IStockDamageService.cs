@@ -9,7 +9,7 @@ namespace Stock_Damage.Interfaces
         Task<List<SubItem_Code>> GetItemsAsync();
         Task<List<Currency>> GetCurrenciesAsync();
         Task<List<Employee>> GetEmployeesAsync();
-        Task<ItemDetailsResponse> GetItemDetailsAsync(string subItemCode);
+        Task<ItemDetailsResponse?> GetItemDetailsAsync(string subItemCode);
         Task<SaveResponse> SaveStockDamageAsync(List<StockDamageEntry> entries, string createdBy);
     }
 

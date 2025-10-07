@@ -4,11 +4,11 @@ namespace Stock_Damage.DTOs
 {
     public class StockDamageEntry
     {
-        public string GodownNo { get; set; }
-        public string GodownName { get; set; }
-        public string SubItemCode { get; set; }
-        public string SubItemName { get; set; }
-        public string Unit { get; set; }
+        public string? GodownNo { get; set; }
+        public string? GodownName { get; set; }
+        public string? SubItemCode { get; set; }
+        public string? SubItemName { get; set; }
+        public string? Unit { get; set; }
         public decimal Stock { get; set; }
         public string BatchNo { get; set; } = "NA";
 
@@ -23,10 +23,10 @@ namespace Stock_Damage.DTOs
         [Required]
         public decimal AmountIn { get; set; }
 
-        public string CurrencyName { get; set; }
+        public string? CurrencyName { get; set; }
         public decimal ConversionRate { get; set; }
         public string DrAcHead { get; set; } = "Stock Damage";
-        public string EmployeeName { get; set; }
-        public string Comments { get; set; }
+        public string? EmployeeName { get; set; }
+        public string? Comments { get; set; }
     }
 }

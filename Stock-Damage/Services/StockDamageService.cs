@@ -9,7 +9,7 @@ namespace Stock_Damage.Services
 {
     public class StockDamageService : IStockDamageService
     {
-        private readonly string _connectionString;
+        private readonly string? _connectionString;
 
         public StockDamageService(IConfiguration configuration)
         {
@@ -20,26 +20,39 @@ namespace Stock_Damage.Services
         {
             var godowns = new List<Godown>();
 
-            using (var connection = new SqlConnection(_connectionString))
+            if (string.IsNullOrEmpty(_connectionString))
             {
-                using (var command = new SqlCommand("SP_GetGodowns", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    await connection.OpenAsync();
+                throw new InvalidOperationException("Connection string is not configured.");
+            }
 
-                    using (var reader = await command.ExecuteReaderAsync())
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    using (var command = new SqlCommand("SP_GetGodowns", connection))
                     {
-                        while (await reader.ReadAsync())
+                        command.CommandType = CommandType.StoredProcedure;
+                        await connection.OpenAsync();
+
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            godowns.Add(new Godown
+                            while (await reader.ReadAsync())
                             {
-                                AutoSlNo = reader.GetInt32(0),
-                                GodownNo = reader.GetString(1),
-                                GodownName = reader.GetString(2)
-                            });
+                                godowns.Add(new Godown
+                                {
+                                    AutoSlNo = reader.GetInt32(0),
+                                    GodownNo = reader.IsDBNull(1) ? null : reader.GetString(1),
+                                    GodownName = reader.IsDBNull(2) ? null : reader.GetString(2)
+                                });
+                            }
                         }
                     }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                throw new Exception("Database error while fetching godowns: " + ex.Message, ex);
             }
 
             return godowns;
@@ -49,28 +62,41 @@ namespace Stock_Damage.Services
         {
             var items = new List<SubItem_Code>();
 
-            using (var connection = new SqlConnection(_connectionString))
+            if (string.IsNullOrEmpty(_connectionString))
             {
-                using (var command = new SqlCommand("SP_GetItems", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    await connection.OpenAsync();
+                throw new InvalidOperationException("Connection string is not configured.");
+            }
 
-                    using (var reader = await command.ExecuteReaderAsync())
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    using (var command = new SqlCommand("SP_GetItems", connection))
                     {
-                        while (await reader.ReadAsync())
+                        command.CommandType = CommandType.StoredProcedure;
+                        await connection.OpenAsync();
+
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            items.Add(new SubItem_Code
+                            while (await reader.ReadAsync())
                             {
-                                AutoSlNo = reader.GetInt32(0),
-                                SubItemCode = reader.GetString(1),
-                                SubItemName = reader.GetString(2),
-                                Unit = reader.GetString(3),
-                                Weight = reader.IsDBNull(4) ? null : reader.GetDecimal(4)
-                            });
+                                items.Add(new SubItem_Code
+                                {
+                                    AutoSlNo = reader.GetInt32(0),
+                                    SubItemCode = reader.IsDBNull(1) ? null : reader.GetString(1),
+                                    SubItemName = reader.IsDBNull(2) ? null : reader.GetString(2),
+                                    Unit = reader.IsDBNull(3) ? null : reader.GetString(3),
+                                    Weight = reader.IsDBNull(4) ? null : reader.GetDecimal(4)
+                                });
+                            }
                         }
                     }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                throw new Exception("Database error while fetching items: " + ex.Message, ex);
             }
 
             return items;
@@ -80,26 +106,39 @@ namespace Stock_Damage.Services
         {
             var currencies = new List<Currency>();
 
-            using (var connection = new SqlConnection(_connectionString))
+            if (string.IsNullOrEmpty(_connectionString))
             {
-                using (var command = new SqlCommand("SP_GetCurrencies", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    await connection.OpenAsync();
+                throw new InvalidOperationException("Connection string is not configured.");
+            }
 
-                    using (var reader = await command.ExecuteReaderAsync())
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    using (var command = new SqlCommand("SP_GetCurrencies", connection))
                     {
-                        while (await reader.ReadAsync())
+                        command.CommandType = CommandType.StoredProcedure;
+                        await connection.OpenAsync();
+
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            currencies.Add(new Currency
+                            while (await reader.ReadAsync())
                             {
-                                CurrencyId = reader.GetInt32(0),
-                                CurrencyName = reader.GetString(1),
-                                ConversionRate = reader.GetDecimal(2)
-                            });
+                                currencies.Add(new Currency
+                                {
+                                    CurrencyId = reader.GetInt32(0),
+                                    CurrencyName = reader.IsDBNull(1) ? null : reader.GetString(1),
+                                    ConversionRate = reader.GetDecimal(2)
+                                });
+                            }
                         }
                     }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                throw new Exception("Database error while fetching currencies: " + ex.Message, ex);
             }
 
             return currencies;
@@ -109,60 +148,91 @@ namespace Stock_Damage.Services
         {
             var employees = new List<Employee>();
 
-            using (var connection = new SqlConnection(_connectionString))
+            if (string.IsNullOrEmpty(_connectionString))
             {
-                using (var command = new SqlCommand("SP_GetEmployees", connection))
-                {
-                    command.CommandType = CommandType.StoredProcedure;
-                    await connection.OpenAsync();
+                throw new InvalidOperationException("Connection string is not configured.");
+            }
 
-                    using (var reader = await command.ExecuteReaderAsync())
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    using (var command = new SqlCommand("SP_GetEmployees", connection))
                     {
-                        while (await reader.ReadAsync())
+                        command.CommandType = CommandType.StoredProcedure;
+                        await connection.OpenAsync();
+
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            employees.Add(new Employee
+                            while (await reader.ReadAsync())
                             {
-                                EmployeeId = reader.GetInt32(0),
-                                EmployeeCode = reader.GetString(1),
-                                EmployeeName = reader.GetString(2),
-                                Department = reader.IsDBNull(3) ? null : reader.GetString(3)
-                            });
+                                employees.Add(new Employee
+                                {
+                                    EmployeeId = reader.GetInt32(0),
+                                    EmployeeCode = reader.IsDBNull(1) ? null : reader.GetString(1),
+                                    EmployeeName = reader.IsDBNull(2) ? null : reader.GetString(2),
+                                    Department = reader.IsDBNull(3) ? null : reader.GetString(3)
+                                });
+                            }
                         }
                     }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                throw new Exception("Database error while fetching employees: " + ex.Message, ex);
             }
 
             return employees;
         }
 
-        public async Task<ItemDetailsResponse> GetItemDetailsAsync(string subItemCode)
+        public async Task<ItemDetailsResponse?> GetItemDetailsAsync(string subItemCode)
         {
-            ItemDetailsResponse itemDetails = null;
+            ItemDetailsResponse? itemDetails = null;
 
-            using (var connection = new SqlConnection(_connectionString))
+            if (string.IsNullOrEmpty(_connectionString))
             {
-                using (var command = new SqlCommand("SP_GetItemDetails", connection))
+                throw new InvalidOperationException("Connection string is not configured.");
+            }
+
+            if (string.IsNullOrEmpty(subItemCode))
+            {
+                return null;
+            }
+
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@SubItemCode", subItemCode);
-
-                    await connection.OpenAsync();
-
-                    using (var reader = await command.ExecuteReaderAsync())
+                    using (var command = new SqlCommand("SP_GetItemDetails", connection))
                     {
-                        if (await reader.ReadAsync())
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.AddWithValue("@SubItemCode", subItemCode);
+
+                        await connection.OpenAsync();
+
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            itemDetails = new ItemDetailsResponse
+                            if (await reader.ReadAsync())
                             {
-                                SubItemCode = reader.GetString(0),
-                                SubItemName = reader.GetString(1),
-                                Unit = reader.GetString(2),
-                                Weight = reader.IsDBNull(3) ? null : reader.GetDecimal(3),
-                                StockQuantity = reader.GetDecimal(4)
-                            };
+                                itemDetails = new ItemDetailsResponse
+                                {
+                                    SubItemCode = reader.IsDBNull(0) ? null : reader.GetString(0),
+                                    SubItemName = reader.IsDBNull(1) ? null : reader.GetString(1),
+                                    Unit = reader.IsDBNull(2) ? null : reader.GetString(2),
+                                    Weight = reader.IsDBNull(3) ? null : reader.GetDecimal(3),
+                                    StockQuantity = reader.GetDecimal(4)
+                                };
+                            }
                         }
                     }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                throw new Exception("Database error while fetching item details: " + ex.Message, ex);
             }
 
             return itemDetails;
@@ -172,28 +242,57 @@ namespace Stock_Damage.Services
         {
             var response = new SaveResponse();
 
-            using (var connection = new SqlConnection(_connectionString))
+            if (string.IsNullOrEmpty(_connectionString))
             {
-                using (var command = new SqlCommand("SP_StockDamage_Save", connection))
+                response.Status = "Error";
+                response.Message = "Connection string is not configured.";
+                return response;
+            }
+
+            if (entries == null || !entries.Any())
+            {
+                response.Status = "Error";
+                response.Message = "No entries to save.";
+                return response;
+            }
+
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Convert entries to JSON
-                    string jsonData = JsonConvert.SerializeObject(entries);
-                    command.Parameters.AddWithValue("@StockDamageData", jsonData);
-                    command.Parameters.AddWithValue("@CreatedBy", createdBy ?? "System");
-
-                    await connection.OpenAsync();
-
-                    using (var reader = await command.ExecuteReaderAsync())
+                    using (var command = new SqlCommand("SP_StockDamage_Save", connection))
                     {
-                        if (await reader.ReadAsync())
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Convert entries to JSON
+                        string jsonData = JsonConvert.SerializeObject(entries);
+                        command.Parameters.AddWithValue("@StockDamageData", jsonData);
+                        command.Parameters.AddWithValue("@CreatedBy", createdBy ?? "System");
+
+                        await connection.OpenAsync();
+
+                        using (var reader = await command.ExecuteReaderAsync())
                         {
-                            response.Status = reader.GetString(0);
-                            response.Message = reader.GetString(1);
+                            if (await reader.ReadAsync())
+                            {
+                                response.Status = reader.IsDBNull(0) ? null : reader.GetString(0);
+                                response.Message = reader.IsDBNull(1) ? null : reader.GetString(1);
+                            }
                         }
                     }
                 }
+            }
+            catch (SqlException ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                response.Status = "Error";
+                response.Message = "Database error while saving stock damage: " + ex.Message;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (in a real application, use a logging framework)
+                response.Status = "Error";
+                response.Message = "Error while saving stock damage: " + ex.Message;
             }
 
             return response;
