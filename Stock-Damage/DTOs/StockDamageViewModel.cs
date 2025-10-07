@@ -1,6 +1,6 @@
 ﻿using Stock_Damage.Models;
 
-namespace Stock_Damage.Models
+namespace Stock_Damage.DTOs
 {
     public class StockDamageViewModel
     {
