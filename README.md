@@ -1,6 +1,6 @@
 # Stock Damage Management System
 
-A web application built with ASP.NET Core MVC for managing stock damage entries in a warehouse or inventory system.
+ASP.NET Core 8.0 MVC application for tracking warehouse inventory damage. Features include real-time item lookup, multi-warehouse support, currency conversion, and employee tracking.
 
 ## Table of Contents
 
