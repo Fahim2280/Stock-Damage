@@ -51,7 +51,6 @@ namespace Stock_Damage.Services
             }
             catch (SqlException ex)
             {
-                // Log the exception (in a real application, use a logging framework)
                 throw new Exception("Database error while fetching godowns: " + ex.Message, ex);
             }
 
@@ -95,7 +94,6 @@ namespace Stock_Damage.Services
             }
             catch (SqlException ex)
             {
-                // Log the exception (in a real application, use a logging framework)
                 throw new Exception("Database error while fetching items: " + ex.Message, ex);
             }
 
