@@ -3,7 +3,8 @@
     ViewData["Title"] = "Stock Damage";
 }
 
-<div class="bg-light">  
+<div class="bg-light">
+    <!-- Header -->
     <div class="bg-secondary text-white d-flex justify-content-between align-items-center px-3 py-2" style="font-size: 14px;">
         <span>Stock Damage</span>
         <div>
@@ -13,12 +14,13 @@
         </div>
     </div>
 
+    <!-- Form Section -->
     <div class="bg-white p-3">
         <form id="stockDamageForm">
             <div class="row g-2">
-             
+                <!-- Left Column -->
                 <div class="col-md-6">
-                    
+                    <!-- Date -->
                     <div class="mb-2">
                         <label for="dateInput" class="form-label small mb-1">Date</label>
                         <div class="input-group input-group-sm" style="max-width: 200px;">
@@ -27,7 +29,7 @@
                         </div>
                     </div>
 
-                  
+                    <!-- Voucher No -->
                     <div class="mb-2">
                         <label for="voucherNo" class="form-label small mb-1">Voucher No</label>
                         <div class="input-group input-group-sm">
@@ -36,7 +38,7 @@
                         </div>
                     </div>
 
-                 
+                    <!-- Warehouse Name -->
                     <div class="mb-2">
                         <label for="godownSelect" class="form-label small mb-1">Warehouse Name</label>
                         <select class="form-select form-select-sm" id="godownSelect">
@@ -48,7 +50,7 @@
                         </select>
                     </div>
 
-                  
+                    <!-- Item Name -->
                     <div class="mb-2">
                         <label for="itemSelect" class="form-label small mb-1">Item Name</label>
                         <select class="form-select form-select-sm" id="itemSelect">
@@ -71,25 +73,26 @@
                             <input type="text" class="form-control form-control-sm bg-light" id="unit" readonly>
                         </div>
                     </div>
-                 
+
+                    <!-- Batch No and Stock Row -->
                     <div class="row mb-2">
                         <div class="col-md-6">
                             <label for="batchNo" class="form-label small mb-1">Batch No</label>
                             <select class="form-select form-select-sm" id="batchNo">
                                 <option value="Stock">Stock</option>
-                                <option value="NA" selected>NA</option>
+                                <option value="NA">NA</option>
                             </select>
                         </div>
-
                         <div class="col-md-6">
-                            <label for="Stock" class="form-label small mb-1">Stock</label>
-                            <input type="text" class="form-control form-control-sm bg-light" id="Stock" readonly>
+                            <label for="stock" class="form-label small mb-1">Stock</label>
+                            <input type="text" class="form-control form-control-sm bg-light" id="stock" readonly>
                         </div>
                     </div>
                 </div>
 
-
-                <div class="col-md-6">       
+                <!-- Right Column -->
+                <div class="col-md-6">
+                    <!-- Currency -->
                     <div class="mb-2">
                         <label for="currencySelect" class="form-label small mb-1">Currency</label>
                         <select class="form-select form-select-sm" id="currencySelect">
@@ -100,7 +103,8 @@
                             }
                         </select>
                     </div>
-                 
+
+                    <!-- Quantity and Rate Row -->
                     <div class="row mb-2">
                         <div class="col-md-6">
                             <label for="quantity" class="form-label small mb-1">Quantity</label>
@@ -112,13 +116,13 @@
                         </div>
                     </div>
 
-               
+                    <!-- Amount In -->
                     <div class="mb-2">
                         <label for="amountIn" class="form-label small mb-1">Amount In</label>
                         <input type="text" class="form-control form-control-sm bg-light" id="amountIn" value="0.00" readonly>
                     </div>
 
-                  
+                    <!-- Exchange Rate and Total Amount Row -->
                     <div class="row mb-2">
                         <div class="col-md-6">
                             <label for="exchangeRate" class="form-label small mb-1">Exchange Rate(in BDT)</label>
@@ -130,7 +134,7 @@
                         </div>
                     </div>
 
-                 
+                    <!-- Dr A/C Head -->
                     <div class="mb-2">
                         <label for="drAcHead" class="form-label small mb-1">Dr A/C Head</label>
                         <select class="form-select form-select-sm" id="drAcHead">
@@ -138,7 +142,7 @@
                         </select>
                     </div>
 
-                   
+                    <!-- Employee Name -->
                     <div class="mb-2">
                         <label for="employeeSelect" class="form-label small mb-1">Employee Name</label>
                         <select class="form-select form-select-sm" id="employeeSelect">
@@ -150,7 +154,7 @@
                         </select>
                     </div>
 
-
+                    <!-- Comments -->
                     <div class="mb-2">
                         <label for="comments" class="form-label small mb-1">Comments</label>
                         <textarea class="form-control form-control-sm" id="comments" rows="2"></textarea>
@@ -158,7 +162,7 @@
                 </div>
             </div>
 
-            
+            <!-- Add Button -->
             <div class="row mt-2">
                 <div class="col-12">
                     <button type="button" class="btn btn-sm btn-light border" id="addBtn">
@@ -169,7 +173,7 @@
         </form>
     </div>
 
-    
+    <!-- Table Section -->
     <div class="bg-white border mt-0">
         <div class="table-responsive">
             <table class="table table-sm table-bordered mb-0 small">
@@ -198,7 +202,7 @@
             </table>
         </div>
         
-        
+        <!-- Total Amount Section -->
         <div class="bg-light p-3 border-top">
             <div class="row">
                 <div class="col-md-8"></div>
@@ -212,6 +216,7 @@
         </div>
     </div>
 
+    <!-- Footer Buttons -->
     <div class="bg-white p-3 border-top">
         <button type="button" class="btn btn-sm btn-light border" id="saveBtn" disabled>
             <i class="fas fa-save"></i> Save
@@ -242,6 +247,7 @@
                 $('#totalAmount').val(totalAmount.toFixed(2));
             }
 
+            // When Item is selected, fetch details
             $('#itemSelect').on('change', function () {
                 const subItemCode = $(this).val();
                 
